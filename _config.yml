@@ -1,9 +1,3 @@
 theme: jekyll-theme-slate
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "default"
+title: Welcome to Logan Burkham's homepage
+descritption: bookmark to follow
