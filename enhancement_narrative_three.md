@@ -1,4 +1,5 @@
-# Logan Burkham ePortfolio 
+# Logan Burkham ePortfolio
+###### [Portfolio Home](./README.md) | [Code Review](./code_review.md) | [Narratives & Enhancements](./narratives_and_enhancements_lander.md) | [Contact](./contact_me.md)
 #### [Portfolio Home](./README.md) > [Enhancement Three Narrative](./enhancement_narrative_three.md)
 
 ## Enhancement Three (Databases)
@@ -10,5 +11,3 @@ I feel that modifying the logging script in regard to database processes was the
 As was the case previously, I feel like updating this script has allowed me to appreciate the changes I have made as a career developer. Modifying this artifact’s database connector brought some depth of knowledge around both the cx_Oracle connector that was previously used and the SQLAlchemy toolkit in production now. I was actually able to see the value of each connector while making this enhancement. Upon working through this implementation, I realized that there may be situations in which the cx_Oracle connector may be better suited (a sentiment that, at the beginning of this project, I would have dismissed as laughable.) However, having skills in multiple avenues of database interaction may be the biggest takeaway from this enhancement. Practice in the field of development is the only way to determine what works best in situations without depending on the reference of a forum user or co-worker. Gaining experience with both of these connectors allows me to act as a source of information for myself and others which in turn makes me a better developer overall.
 
 The code base for this enhancement can be [viewed here](./enhancement_three.md) and [downloaded here](./ebsco_access_logs_SNHU_Module_5/main.py)
-
-###### [Portfolio Home](./README.md) | [Code Review](./code_review.md) | [Narratives & Enhancements](./narratives_and_enhancements_lander.md) | [Contact](./contact_me.md)
