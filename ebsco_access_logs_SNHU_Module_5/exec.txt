@@ -1,0 +1,51 @@
+MERGE INTO ACU.ACU_EBSCOHOST_SSO_TEMP sso
+USING (
+    SELECT DISTINCT GZBEMAL_PIDM,
+                    GZBEMAL_EMAILID,
+                    GZVACCT_DESC,
+                    FTVORGN_TITLE,
+                    SGBSTDN_CAMP_CODE,
+                    STVMAJR_DESC,
+                    STVCAMP_DESC
+    FROM ACU.GZBEMAL
+             LEFT JOIN
+         (SELECT g1.*
+          FROM (SELECT ROW_NUMBER() OVER (PARTITION BY GZRSTAT_PIDM ORDER BY GZRSTAT_ACTIVITY_DATE DESC) rnum, gzrstat.*
+                FROM GZRSTAT
+                WHERE (GZRSTAT_PIDM, GZRSTAT_ACTIVITY_DATE) IN
+                      (SELECT GZRSTAT_PIDM, MAX(GZRSTAT_ACTIVITY_DATE) FROM GZRSTAT GROUP BY GZRSTAT_PIDM)) g1
+          WHERE g1.rnum = 1) GZRSTAT
+         ON GZRSTAT_PIDM = GZBEMAL_PIDM
+             LEFT JOIN
+         ACU.GZVACCT
+         ON GZVACCT_CODE = GZRSTAT_ACCT_CODE
+             LEFT JOIN
+         PAYROLL.PEBEMPL
+         ON PEBEMPL_PIDM = GZBEMAL_PIDM AND PEBEMPL_EMPL_STATUS = 'A'
+             LEFT JOIN
+         (SELECT *
+          FROM FIMSMGR.FTVORGN
+          WHERE (FTVORGN_ORGN_CODE, FTVORGN_EFF_DATE) IN
+                (SELECT FTVORGN_ORGN_CODE, MAX(FTVORGN_EFF_DATE) FROM FTVORGN GROUP BY FTVORGN_ORGN_CODE)) FTVORGN
+         ON FTVORGN_ORGN_CODE = PEBEMPL_ORGN_CODE_HOME
+             LEFT JOIN
+         (SELECT *
+          FROM SATURN.SGBSTDN
+          WHERE (SGBSTDN_PIDM, SGBSTDN_TERM_CODE_EFF) IN
+                (SELECT SGBSTDN_PIDM, MAX(SGBSTDN_TERM_CODE_EFF) FROM SGBSTDN GROUP BY SGBSTDN_PIDM)) SGBSTDN
+         ON SGBSTDN_PIDM = GZBEMAL_PIDM
+             LEFT JOIN
+         SATURN.STVMAJR
+         ON STVMAJR_CODE = SGBSTDN_MAJR_CODE_1
+             LEFT JOIN
+         SATURN.STVCAMP
+         ON STVCAMP_CODE = SGBSTDN_CAMP_CODE
+    WHERE GZRSTAT_EXPIRATION >= SYSDATE
+) src
+ON (sso.ACU_USERNAME = src.GZBEMAL_EMAILID)
+WHEN MATCHED THEN
+    UPDATE
+    SET sso.campus_code     = src.stvcamp_desc,
+        sso.major_code      = src.stvmajr_desc,
+        sso.account_type    = src.gzvacct_desc,
+        sso.department_desc = src.ftvorgn_title
