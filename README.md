@@ -1,10 +1,15 @@
 ## Welcome to GitHub Pages
 
-Here is the original code review done. Click the image to open in a new tab:
+Here is the original code review done. Click the image to open in a new window:
 
 [![Watch the Video](https://user-images.githubusercontent.com/54014387/154746799-9a32f995-b7bf-492a-8e96-47e56e0d60a4.png)](https://youtu.be/yE5N1a46ZKg)
 
-[go](https://youtu.be/yE5N1a46ZKg)
+[Enhancement one](./ebsco_access_logs_SNHU_Module_3)
+
+[Enhancement two](./ebsco_access_logs_SNHU_Module_4)
+
+[Enhancement three](./ebsco_access_logs_SNHU_Module_5)
+
 
 You can use the [editor on GitHub](https://github.com/lzburkham/lzburkham.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
