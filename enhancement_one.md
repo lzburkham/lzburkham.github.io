@@ -1,5 +1,5 @@
 # Logan Burkham ePortfolio 
-#### [Portfolio Home](./README.md) > [Enhancement One Narrative](./enhancement_narrative_one.md) > [Enhancement One](./Enhancement_one)
+#### [Portfolio Home](./README.md) > [Enhancement One Narrative](./enhancement_narrative_one.md) > [Enhancement One](./Enhancement_one.md)
 
 ## Enhancement One (Software Design and Engineering)
 
