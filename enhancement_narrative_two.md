@@ -1,4 +1,5 @@
 # Logan Burkham ePortfolio 
+###### [Portfolio Home](./README.md) | [Code Review](./code_review.md) | [Narratives & Enhancements](./narratives_and_enhancements_lander.md) | [Contact](./contact_me.md)
 #### [Portfolio Home](./README.md) > [Enhancement Two Narrative](./enhancement_narrative_two.md)
 
 ## Enhancement Two (Algorithms and Data Structures)
@@ -20,5 +21,3 @@ I strove to complete these upgrades with these course outcomes in mind because t
 Enhancing this project has been quite interesting for me. It has been eye-opening to see how far I have come as a career developer since writing this script initially. Participating in a dispersed campus environment can make it difficult to have any measuring stick in which to judge my progress as a developer. Additionally, I am not a traditional student, to begin with. I am 29 years old, I have two kids and a third on the way. I am a full-time husband, father, student, and employee. Measuring against any of my ‘peers’ has always made me feel quite behind the traditional timeline. Revisiting this project has helped to ease my frustrations with the decisions my younger self made if only a bit. I think that often developers find themselves in this place of feeling technically inadequate. I’m not sure that I have an answer to that but, revisiting this project has allowed me to judge my progress against my own self and that has been uplifting for me.
 
 The code base for this enhancement can be [viewed here](./enhancement_two.md) and [downloaded here](./ebsco_access_logs_SNHU_Module_4/main.py)
-
-###### [Portfolio Home](./README.md) | [Code Review](./code_review.md) | [Narratives & Enhancements](./narratives_and_enhancements_lander.md) | [Contact](./contact_me.md)
