@@ -1,7 +1,7 @@
 # Logan Burkham ePortfolio 
 #### [Portfolio Home](./README.md) > [Enhancement One Narrative](./enhancement_narrative_one.md)
 
-## Enhancement One (Data Structures and Algorithms)
+## Enhancement One (Software Desgin and Engineering)
 The artifact that I am refining for the Software Design/Engineering category of the course outcome is a logging script that I wrote for Abilene Christian University to gather user access logs from the Azure AD SSO integration of the Ebsco Library Online software. This script is used to gather these logs and quantify data within the university ERP database. This script was written in 2021 to meet the reporting needs of the ACU Library for the multi-campus institutional user base.
 
 This artifact is actually inclusive of all of the components of the intended course outcomes. I feel that it demonstrates a piece of software that can be improved to showcase the improvements that I have made as a software developer since writing it nearly a year ago, as well as showcases the amount of thought that was put into the project at its inception. Specifically, the use of the imported modules to make the creation and manipulation of the data that is accessed from the ERP database to be reported on showcases my initial abilities in software development. However, this artifact has been improved (with regard to software development/engineering) by implementing a clearer Object-Oriented Programming methodology and including the python industry standard “if-dunder-name-is-dunder-main” case statement. This change showcases the improvements I have made as a backend developer since this script was created.
