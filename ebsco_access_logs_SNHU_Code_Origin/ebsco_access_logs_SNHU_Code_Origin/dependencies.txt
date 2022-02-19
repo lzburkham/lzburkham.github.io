@@ -1,0 +1,4 @@
+cx_Oracle
+loguru
+python-dotenv
+pandas
